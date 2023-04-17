@@ -2,8 +2,26 @@
 
 .ticket {
   width: 100%;
+  background: red;
 }
 
 .ticket:hover {
   cursor: pointer;
+}
+.ticket-container {
+  display: inline-flex; /* utiliser inline-flex pour placer l'icône et le texte dans la même ligne */
+  align-items: center; /* centrer verticalement l'icône par rapport à la hauteur du conteneur */
+  justify-content: flex-start; /* aligner les éléments à gauche */
+}
+
+.ticket {
+  margin-right: 10px; /* ajouter un espacement à droite de l'icône */
+}
+
+.fa {
+  font-size: 24px; /* définir la taille de l'icône */
+}
+
+.ticket-text {
+  font-size: 24px; /* définir la taille du texte */
 }

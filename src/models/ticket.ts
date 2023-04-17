@@ -1,6 +1,8 @@
+import { TicketMajor } from './ticket-major.enum';
 export interface Ticket {
   title?: string;
   description?: string;
   date?: Date;
-  author?: string;
+  student?: string;
+  major: TicketMajor;
 }

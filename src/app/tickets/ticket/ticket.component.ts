@@ -8,6 +8,7 @@ import { Ticket } from '../../../models/ticket';
 })
 export class TicketComponent implements OnInit {
 
+
   /**
    * Inputs & Output allow communication between parent & child components.
    * More information: https://angular.io/guide/component-interaction
@@ -25,6 +26,14 @@ export class TicketComponent implements OnInit {
   }
 
   selectTicket() {
+
     this.ticketHasBeenSelected.emit(true);
+  }
+  
+
+  @Output() ticketDeleted = new EventEmitter<Ticket>();
+
+  deleteTicket() {
+    this.ticketDeleted.emit(this.ticket);
   }
 }
